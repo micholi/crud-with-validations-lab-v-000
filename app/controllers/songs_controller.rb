@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    set_show
+    set_song
   end
 
   def new
@@ -17,11 +17,11 @@ class SongsController < ApplicationController
   end
 
   def edit
-    set_show
+    set_song
   end
 
     def update
-      set_show
+      set_song
     end
 
     private
