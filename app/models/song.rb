@@ -5,4 +5,3 @@ class Song < ActiveRecord::Base
   validates :release_year, presence: true unless :released == false
   validates :release_year, numericality: {only_integer: true, less_than_or_equal_to: Time.now.year}
 end
-end
