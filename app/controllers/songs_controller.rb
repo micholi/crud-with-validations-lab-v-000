@@ -14,6 +14,10 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
+    if valid?
+      @song.save
+    else
+      render :new
   end
 
   def edit
