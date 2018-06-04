@@ -9,11 +9,11 @@ class SongsController < ApplicationController
   end
 
   def new
-
+    @song = Song.new
   end
 
   def create
-
+    @song = Song.new
   end
 
   def edit
@@ -28,5 +28,9 @@ class SongsController < ApplicationController
 
     def set_song
       @song = Song.find(params[:id])
+    end
+
+    def song_params
+
     end
 end
