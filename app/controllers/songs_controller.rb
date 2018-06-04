@@ -14,7 +14,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    if valid?
+    if @song.valid?
       @song.save
     else
       render :new
