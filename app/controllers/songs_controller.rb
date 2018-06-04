@@ -27,6 +27,12 @@ class SongsController < ApplicationController
 
     def update
       set_song
+      @song.update(song_params)
+      if @song.valid?
+        @song.save
+      else
+        render :edit
+      end
     end
 
     private
