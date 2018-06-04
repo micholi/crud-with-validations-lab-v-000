@@ -31,6 +31,6 @@ class SongsController < ApplicationController
     end
 
     def song_params
-      
+      params.require(:song).parmit(:title, :released, :release_year, :artist_name, :genre)
     end
 end
