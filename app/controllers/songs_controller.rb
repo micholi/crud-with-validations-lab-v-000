@@ -18,6 +18,7 @@ class SongsController < ApplicationController
       @song.save
     else
       render :new
+    end
   end
 
   def edit
